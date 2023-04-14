@@ -1,0 +1,1 @@
+export { VerticalNavbar as VerticalNavbar } from './VerticalNavbar';
