@@ -48,15 +48,15 @@ export function VerticalNavbar() {
         })}
       >
         <nav className="space-y-6 px-2 py-5">
-              <div key="section-name">
-                <div className="mb-2 px-3 text-xs font-semibold uppercase tracking-wider text-gray-400/80">
-                  <div>section-name</div>
-                </div>
+          <div key="section-name">
+            <div className="mb-2 px-3 text-xs font-semibold uppercase tracking-wider text-gray-400/80">
+              <div>section-name</div>
+            </div>
 
-                <div className="space-y-1">
-                    section-item
-                </div>
-              </div>
+            <div className="space-y-1">
+              section-item
+            </div>
+          </div>
         </nav>
         <Byline className="absolute hidden sm:block" />
       </div>
