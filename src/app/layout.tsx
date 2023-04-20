@@ -3,6 +3,7 @@ import './globals.css'
 import { AddressBar } from '@/components/common/AddressBar'
 import { Byline } from '@/components/common/Byline'
 import { VerticalNavbar } from '@/components/common/navbar/vertical'
+import { Providers } from './providers'
 
 export const metadata: Metadata = {
   title: {
@@ -19,8 +20,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="[color-scheme:dark]">
-      <body className="bg-gray-1100 overflow-y-scroll bg-[url('/grid.svg')] pb-36">
-        <main>{children}</main>
+      <body className="bg-primary overflow-y-scroll bg-[url('/grid.svg')] pb-36">
+        <Providers> <main>{children}</main></Providers>
+
 
         {/* <div className="lg:pl-72">
           <div className="mx-auto max-w-4xl space-y-8 px-2 pt-20 lg:py-8 lg:px-8">

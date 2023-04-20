@@ -102,6 +102,11 @@ export default function RootLayout({
               alt="Picture of the author" />
           </div>
 
+          <div className="ml-4 flex items-center">
+            <button>Dark</button>/
+            <button>Light</button>
+          </div>
+
           <Image className='ml-auto'
             src="/Hansel.svg" width={24}
             height={24}
