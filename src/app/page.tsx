@@ -1,6 +1,7 @@
 "use client"
 import { useTheme } from 'next-themes'
 import { Inter } from 'next/font/google'
+import Link from 'next/link'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -12,6 +13,11 @@ export default function Home() {
   return (
     <div className="space-y-8">
       <h1 className="text-xl font-medium text-gray-300">Examples</h1>
+
+      <div >
+        <Link className='text-primary' href={'/vertical-dashboard'}>Vertical</Link>/
+        <Link className='text-primary' href={'/horizontal-dashboard'}>Horizontal</Link>
+      </div>
       <p className="text-primary">
         The current theme is: {theme}
       </p>
