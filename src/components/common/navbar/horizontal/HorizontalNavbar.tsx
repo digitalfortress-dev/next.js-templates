@@ -78,7 +78,7 @@ const Logo = () => {
         alt="Picture of the author"
       />
       <Link href={"/horizontal-dashboard"} className='ml-2 text-primary'>
-        Ninja  /  Dashboard
+        App  /  Dashboard
       </Link>
     </div>
   )
