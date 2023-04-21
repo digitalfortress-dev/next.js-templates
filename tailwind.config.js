@@ -13,6 +13,16 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      backgroundColor: {
+        primary: "var(--color-bg-primary)",
+        secondary: "var(--color-bg-secondary)",
+        accent: "var(--color-bg-secondary)",
+    },
+    textColor: {
+        primary: "var(--color-text-primary)",
+        secondary: "var(--color-text-secondary)",
+        accent: "var(--color-text-accent)",
+    },
       // https://vercel.com/design/color
       colors: {
         gray: colors.zinc,
@@ -85,6 +95,13 @@ module.exports = {
         },
       }),
       maxWidth : {
+        50: '50%',
+        60: '60%',
+        70: '70%',
+        80: '80%',
+        90: '90%',
+      },
+      minWidth : {
         50: '50%',
         60: '60%',
         70: '70%',

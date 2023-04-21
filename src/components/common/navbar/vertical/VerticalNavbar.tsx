@@ -10,18 +10,18 @@ export function VerticalNavbar() {
   const close = () => setIsOpen(false);
 
   return (
-    <div className="fixed top-0 z-10 flex w-full flex-col border-b border-gray-800 bg-black lg:bottom-0 lg:z-auto lg:w-72 lg:border-b-0 lg:border-r lg:border-gray-800">
+    <div className="fixed top-0 z-10 flex w-full flex-col border-b border-gray-800 bg-primary lg:bottom-0 lg:z-auto lg:w-72 lg:border-b-0 lg:border-r lg:border-gray-800">
       <div className="flex h-14 items-center py-4 px-4 lg:h-auto">
         <Link
           href="/"
           className="group flex w-full items-center gap-x-2.5"
           onClick={close}
         >
-          <div className="h-7 w-7 rounded-full border border-white/30 group-hover:border-white/50">
+          <div className="text-primary h-7 w-7 rounded-full border border-white/30 group-hover:border-white/50">
             Logo
           </div>
 
-          <h3 className="font-semibold tracking-wide text-gray-400 group-hover:text-gray-50">
+          <h3 className="font-semibold tracking-wide text-primary group-hover:text-gray-50">
             App Router <span className="Work in progress">(Beta)</span>
           </h3>
         </Link>
@@ -31,7 +31,7 @@ export function VerticalNavbar() {
         className="group absolute right-0 top-0 flex h-14 items-center gap-x-2 px-4 lg:hidden"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <div className="font-medium text-gray-100 group-hover:text-gray-400">
+        <div className="font-medium text-gray-100 group-hover:text-primary">
           Menu
         </div>
         {isOpen ? (
@@ -49,11 +49,11 @@ export function VerticalNavbar() {
       >
         <nav className="space-y-6 px-2 py-5">
           <div key="section-name">
-            <div className="mb-2 px-3 text-xs font-semibold uppercase tracking-wider text-gray-400/80">
+            <div className="mb-2 px-3 text-xs font-semibold uppercase tracking-wider text-primary">
               <div>section-name</div>
             </div>
 
-            <div className="space-y-1">
+            <div className="space-y-1 text-primary">
               section-item
             </div>
           </div>
