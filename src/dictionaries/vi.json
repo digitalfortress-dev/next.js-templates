@@ -1,0 +1,8 @@
+{
+  "server-component": {
+    "welcome": "Welcome"
+  },
+  "dashboard": {
+    "home": "Trang chủ"
+  }
+}

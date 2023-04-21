@@ -1,16 +1,22 @@
+import { getDictionary } from '@/get-dictionary'
+import { Locale } from '@/i18n-config'
 import { Inter } from 'next/font/google'
 import Link from 'next/link'
 
-
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
-
+export default async function Home({
+  params: { lang },
+}: {
+  params: { lang: Locale }
+}) {
+  const dictionary = await getDictionary(lang);
 
   return (
     <div className="space-y-8">
       <h1 className="text-xl font-medium text-gray-300">Examples</h1>
 
+      <button className='text-primary'>{dictionary['dashboard']['home']}</button>
       <div>
         <Link className='text-primary' href={'/vertical-dashboard'}>Vertical</Link>/
         <Link className='text-primary' href={'/horizontal-dashboard'}>Horizontal</Link>
