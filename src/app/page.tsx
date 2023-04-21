@@ -1,5 +1,3 @@
-"use client"
-import { useTheme } from 'next-themes'
 import { Inter } from 'next/font/google'
 import Link from 'next/link'
 
@@ -8,7 +6,6 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
 
-  const { theme, setTheme } = useTheme()
 
   return (
     <div className="space-y-8">
@@ -18,13 +15,6 @@ export default function Home() {
         <Link className='text-primary' href={'/vertical-dashboard'}>Vertical</Link>/
         <Link className='text-primary' href={'/horizontal-dashboard'}>Horizontal</Link>
       </div>
-      <p className="text-primary">
-        The current theme is: {theme}
-      </p>
-
-
-      <button className="text-primary" onClick={() => setTheme('light')}>Light Mode</button>/
-      <button className="text-primary" onClick={() => setTheme('dark')}>Dark Mode</button>
       <div className="space-y-10 text-white"></div>
       <div key="section-name" className="space-y-5">
         <div className="text-xs font-semibold uppercase tracking-wider text-gray-400">

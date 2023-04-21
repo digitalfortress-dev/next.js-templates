@@ -58,22 +58,10 @@ export function HorizontalNavbar() {
         <div className='rounded-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20'>
           <div className='flex items-center rounded-lg bg-primary pl-2 py-1'>
             <Logo />
-            <div className='max-w-full flex flex-wrap items-center justify-between'>
-              {
-                menuIcon.map((item, index) => {
-                  return <Link className='mr-3' key={index} href='#'><Image
-                    src={item.icon}
-                    width={32}
-                    height={32}
-                    alt="Picture of the author"
-                  /></Link>
-                })
-              }
-            </div>
+            <NavbarList />
           </div>
         </div>
         <Search />
-
         <User />
       </nav>
     </aside>
