@@ -14,7 +14,7 @@ export default function Home() {
     <div className="space-y-8">
       <h1 className="text-xl font-medium text-gray-300">Examples</h1>
 
-      <div >
+      <div>
         <Link className='text-primary' href={'/vertical-dashboard'}>Vertical</Link>/
         <Link className='text-primary' href={'/horizontal-dashboard'}>Horizontal</Link>
       </div>
@@ -37,7 +37,7 @@ export default function Home() {
             Test
           </div>
 
-          <div className="text-sm text-secondary line-clamp-3 group-hover:text-gray-300">
+          <div className="text-sm text-primary line-clamp-3 group-hover:text-gray-300">
             Test Description
           </div>
         </div>

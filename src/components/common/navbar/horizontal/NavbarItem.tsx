@@ -8,14 +8,11 @@ type INavbarItem = {
 
 export function NavbarItem({ name, icon }: INavbarItem) {
   return (
-    <Link className='mr-4 flex items-center' href='#'>
-      <Image
-        src={icon}
-        width={20}
-        height={20}
-        alt="Picture of the author"
-      />
-      <span className='text-xs'>{name}</span>
-    </Link>
+    <Link className='mr-3' href='#'><Image
+      src={icon}
+      width={32}
+      height={32}
+      alt="Picture of the author"
+    /></Link>
   )
 }
