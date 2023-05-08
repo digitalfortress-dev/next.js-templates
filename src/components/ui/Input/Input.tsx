@@ -12,7 +12,7 @@ interface IProp {
   iconBefore?: any;
   iconAfter?: any;
   autoFocus?: boolean;
-  onChange?: () => void;
+  onChange?: (event: any) => void;
   onFocus?: () => void;
   onBlur?: () => void;
 }
@@ -22,17 +22,9 @@ export default function Button({
   classLabel,
   iconBefore,
   iconAfter,
-  type,
-  placeholder,
-  name,
-  label,
-  disabled,
-  autoFocus,
-  value,
   error,
-  onFocus,
-  onChange,
-  onBlur,
+  label,
+  ...rest
 }: IProp) {
   return (
     <div className="mb-6">
@@ -50,16 +42,8 @@ export default function Button({
           </div>
         )}
         <input
-          type={type || 'text'}
-          name={name}
-          disabled={disabled}
+          {...rest}
           className={`${classInput}block w-full rounded-lg border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500  dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500`}
-          placeholder={placeholder || ''}
-          value={value}
-          onFocus={onFocus}
-          onChange={onChange}
-          onBlur={onBlur}
-          autoFocus={autoFocus}
         />
         {iconAfter && (
           <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
