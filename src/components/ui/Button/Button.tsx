@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 interface IProp {
   className?: string;
@@ -5,6 +7,7 @@ interface IProp {
   isDropDown?: boolean;
   icon?: any;
   id?: string;
+  title: string;
   dropdown?: string;
   onClick?: () => void;
 }
@@ -13,6 +16,7 @@ export default function Button({
   disabled,
   isDropDown,
   dropdown,
+  title,
   icon,
   id,
   onClick,
@@ -27,7 +31,7 @@ export default function Button({
       onClick={onClick}
     >
       {icon}
-      Button
+      {title}
       {isDropDown && (
         <Image
           src="/drop-down.svg"
