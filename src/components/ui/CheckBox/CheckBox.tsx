@@ -1,14 +1,9 @@
 'use client';
 
-interface IProp {
-  value: string | number;
+interface IProp extends React.InputHTMLAttributes<{}> {
   className?: string;
   classInput?: string;
   classLabel?: string;
-  checked: boolean;
-  name?: string;
-  disabled?: boolean;
-  onChange?: (even: any) => void;
   label?: string;
   error?: string;
 }

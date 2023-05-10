@@ -1,45 +1,25 @@
 'use client';
-
-import Image from 'next/image';
-interface IProp {
-  className?: string;
-  disabled?: boolean;
-  isDropDown?: boolean;
-  icon?: any;
-  id?: string;
-  title: string;
-  dropdown?: string;
-  onClick?: () => void;
+interface IProp extends React.ButtonHTMLAttributes<{}> {
+  children: React.ReactNode;
+  endIcon?: React.ReactElement;
+  startIcon?: React.ReactElement;
+  className: string;
 }
 export default function Button({
   className,
-  disabled,
-  isDropDown,
-  dropdown,
-  title,
-  icon,
-  id,
-  onClick,
+  children,
+  startIcon,
+  endIcon,
+  ...rest
 }: IProp) {
   return (
     <button
-      id={id}
+      {...rest}
       className={`${className} flex inline-flex items-center gap-2 rounded-lg bg-blue-700 px-4 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800`}
-      type="button"
-      disabled={disabled}
-      data-dropdown-toggle={dropdown}
-      onClick={onClick}
     >
-      {icon}
-      {title}
-      {isDropDown && (
-        <Image
-          src="/drop-down.svg"
-          width={15}
-          height={15}
-          alt="Picture of the author"
-        />
-      )}
+      {startIcon && startIcon}
+      {children}
+      {endIcon && endIcon}
     </button>
   );
 }
