@@ -1,8 +1,8 @@
-import { Metadata } from 'next'
-import './globals.css'
-import { AddressBar } from '@/components/common/AddressBar'
-import { Byline } from '@/components/common/Byline'
-import { VerticalNavbar } from '@/components/common/navbar/vertical'
+import { Metadata } from 'next';
+import { cookies } from 'next/headers';
+
+import PresetColor from '@/components/common/PresetColor';
+import './globals.css';
 export const metadata: Metadata = {
   title: {
     default: 'DF - Next.js Boilerplate',
@@ -19,10 +19,14 @@ export default function RootLayout({
   params: { lang: string }
 }) {
 
+  const cookieStore = cookies();
+  const theme = cookieStore.get('theme');
+
   return (
-    <html lang={params.lang} className="[color-scheme:dark]">
-      <body className="dark bg-primary overflow-y-scroll bg-[url('/grid.svg')] pb-36">
+    <html lang={params.lang}>
+      <body className={`theme-${theme?.value} text-skin-base bg-skin-base overflow-y-scroll bg-[url('/grid.svg')]`}>
         <main>{children}</main>
+        <PresetColor />
         {/* <div className="lg:pl-72">
           <div className="mx-auto max-w-4xl space-y-8 px-2 pt-20 lg:py-8 lg:px-8">
             <div className="rounded-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20">
