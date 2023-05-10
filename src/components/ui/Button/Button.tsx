@@ -1,21 +1,23 @@
 'use client';
+
+import clsx from 'clsx';
+
 interface IProp extends React.ButtonHTMLAttributes<{}> {
   children: React.ReactNode;
   endIcon?: React.ReactElement;
   startIcon?: React.ReactElement;
   className: string;
 }
-export default function Button({
-  className,
-  children,
-  startIcon,
-  endIcon,
-  ...rest
-}: IProp) {
+export default function Button(props: IProp) {
+  const { className, children, startIcon, endIcon, ...rest } = props;
   return (
     <button
       {...rest}
-      className={`${className} flex inline-flex items-center gap-2 rounded-lg bg-blue-700 px-4 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800`}
+      className={clsx(
+        className,
+        'flex items-center gap-2 rounded-lg px-4 py-2.5 text-center text-sm font-medium opacity-90',
+        { 'bg-[#F2F4F7] text-[#D0D5DD] hover:bg-[#F2F4F7]': props.disabled },
+      )}
     >
       {startIcon && startIcon}
       {children}

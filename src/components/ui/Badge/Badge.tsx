@@ -1,4 +1,7 @@
 'use client';
+
+import clsx from 'clsx';
+
 interface IProp {
   className: string;
   title: string;
@@ -9,7 +12,10 @@ export default function Badge({ className, title, startIcon, endIcon }: IProp) {
   return (
     <span
       id="badge-dismiss-default"
-      className={`${className} mr-2 inline-flex items-center rounded bg-blue-100 px-2 py-1 text-sm font-medium text-blue-800 dark:bg-blue-900 dark:text-blue-300`}
+      className={clsx(
+        className,
+        'mr-2 inline-flex items-center rounded px-2 py-1 text-sm font-medium',
+      )}
     >
       {startIcon && startIcon}
       {title}
