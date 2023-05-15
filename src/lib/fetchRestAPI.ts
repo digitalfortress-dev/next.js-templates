@@ -1,7 +1,5 @@
 import { cookies } from 'next/headers';
 
-import { endpointData } from './dataFetching';
-
 interface CustomRequestInit extends RequestInit {
   parseResponse?: boolean;
 }
@@ -12,7 +10,7 @@ class HttpFetch {
 
   constructor(options: { baseURL?: string; headers?: Record<string, string> } = {}) {
 
-    this._baseURL = options.baseURL || endpointData;
+    this._baseURL = options.baseURL || process.env.API_ENDPOINT || '';
     this._headers = options.headers || {};
 
     const cookieStore = cookies();
@@ -95,4 +93,6 @@ class HttpFetch {
   }
 }
 
-export default HttpFetch;
+const FetchData = new HttpFetch();
+
+export default FetchData;
