@@ -5,14 +5,14 @@ import Image from 'next/image';
 import { DOTS, usePagination } from './usePagination';
 
 interface IProp {
-  onPageChange?: any;
+  onPageChange: (value: number) => void;
   totalCount: number;
   siblingCount: number;
   currentPage: number;
   pageSize: number;
   className?: string;
-  previousBtn: any;
-  nextBtn: any;
+  previousBtn: string | React.ReactElement;
+  nextBtn: string | React.ReactElement;
   classButton?: string;
   isPage?: boolean;
 }
