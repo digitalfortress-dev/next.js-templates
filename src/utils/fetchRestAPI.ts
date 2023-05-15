@@ -1,6 +1,5 @@
 import { cookies } from 'next/headers';
-
-import { endpointData } from './dataFetching';
+import { endpointData } from './fetchGraphQl';
 
 interface CustomRequestInit extends RequestInit {
   parseResponse?: boolean;

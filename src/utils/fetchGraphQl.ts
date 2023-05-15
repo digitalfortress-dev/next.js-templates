@@ -1,5 +1,4 @@
 import { cookies } from 'next/headers';
-import { endpointData } from './dataFetching';
 import { isError } from './type-guards';
 
 type ExtractVariables<T> = T extends { variables: object } ? T['variables'] : never;
@@ -7,6 +6,8 @@ type ExtractVariables<T> = T extends { variables: object } ? T['variables'] : ne
 type IHeaders = {
   [key: string]: string
 }
+
+export const endpointData = process.env.API_ENDPOINT || ''
 
 export async function nextFetchGraphQl<T>({
   query,
@@ -38,7 +39,7 @@ export async function nextFetchGraphQl<T>({
       headers: header,
       body: JSON.stringify({
         ...(query && { query }),
-        ...(variables && { variables })  
+        ...(variables && { variables })
       }),
       cache,
       next: { revalidate: 900 } // 15 minutes
