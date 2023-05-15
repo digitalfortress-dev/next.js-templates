@@ -1,7 +1,6 @@
-import React from 'react';
 import { useMemo } from 'react';
 
-interface IProp {
+export interface IPaginationProp {
   totalCount: number;
   pageSize: number;
   siblingCount: number;
@@ -21,7 +20,7 @@ export const usePagination = ({
   currentPage,
   pageSize,
   siblingCount = 1,
-}: IProp) => {
+}: IPaginationProp) => {
   const paginationRange = useMemo(() => {
     const totalPageCount = Math.ceil(totalCount / pageSize);
 
