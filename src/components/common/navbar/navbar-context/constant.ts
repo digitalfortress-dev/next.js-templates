@@ -1,0 +1,1 @@
+export const SEARCH_TEXT_EDIT = 'SEARCH_TEXT_EDIT'
