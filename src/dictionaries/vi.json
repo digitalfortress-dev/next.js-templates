@@ -1,0 +1,10 @@
+{
+  "server-component": {
+    "welcome": "Welcome"
+  },
+  "dashboard": {
+    "home": "Trang chủ",
+    "vertical": "Dọc",
+    "horizontal": "Ngang"
+  }
+}

@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .dark {
+    --color-bg-primary: #000000;
+    --color-bg-secondary: #475569;
+    --color-text-primary: #f8fafc;
+    --color-text-secondary: #FEF3C7;
+    --color-text-accent: #5eead4;
+    --color-hover-strong: #155e75;
+    --color-hover-weak: #0e7490;
+    }
+    
+  .light {
+    --color-bg-primary: #f8fafc;
+    --color-bg-secondary: #e2e8f0;
+    --color-text-primary: #334155;
+    --color-text-secondary: #0369a1;
+    --color-text-accent: #6d28d9;
+    --color-hover-strong: #a5f3fc;
+    --color-hover-weak: #cffafe;
+    }
+ 
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+/* @layer base {
+  :root {
+    --bg-color: #ffffff;
+    --text-color: #101828;
+  }
+
+  .theme-dark {
+    --bg-color: #161C24;
+    --text-color: #FFFF;
+  }
+
+  .theme-purple {
+    --bg-color: #B985F4;
+    --text-color: #fff;
+  }
+
+  .theme-purple-dark {
+    --bg-color: #7909e8;
+    --text-color: #fff;
+  }
+
+  .theme-cyan {
+    --bg-color: #76F2FF;
+    --text-color: #212B36;
+  }
+
+  .theme-cyan-dark {
+    --bg-color: #0E77B7;
+    --text-color: #212B36;
+  }
+
+  .theme-blue {
+    --bg-color: #76B0F1;
+    --text-color: #fff;
+  }
+
+  .theme-blue-dark {
+    --bg-color: #103996;
+    --text-color: #fff;
+  }
+
+  .theme-orange {
+    --bg-color: #FED680;
+    --text-color: #212B36;
+  }
+
+  .theme-orange-dark {
+    --bg-color: #B66816;
+    --text-color: #212B36;
+  }
+
+  .theme-red {
+    --bg-color: #FFC1AC;
+    --text-color: #fff;
+  }
+
+  .theme-red-dark {
+    --bg-color: #B71833;
+    --text-color: #fff;
+  }
+
+} */
+}
