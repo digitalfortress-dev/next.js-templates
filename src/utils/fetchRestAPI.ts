@@ -1,5 +1,4 @@
 import { cookies } from 'next/headers';
-import { endpointData } from './fetchGraphQl';
 
 interface CustomRequestInit extends RequestInit {
   parseResponse?: boolean;
@@ -11,7 +10,7 @@ class HttpFetch {
 
   constructor(options: { baseURL?: string; headers?: Record<string, string> } = {}) {
 
-    this._baseURL = options.baseURL || endpointData;
+    this._baseURL = options.baseURL || process.env.API_ENDPOINT || '';
     this._headers = options.headers || {};
 
     const cookieStore = cookies();

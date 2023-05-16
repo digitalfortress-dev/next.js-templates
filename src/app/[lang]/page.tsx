@@ -14,16 +14,16 @@ export default async function Home({
 
   return (
     <div className="space-y-8">
-      <h1 className="text-xl font-medium text-gray-300">Examples</h1>
+      <h1 className="text-xl font-medium text-gray">Examples</h1>
 
-      <button className='text-primary'>{dictionary['dashboard']['home']}</button>
+      <button>{dictionary['dashboard']['home']}</button>
       <div>
-        <Link className='text-primary' href={'/vertical-dashboard'}>Vertical</Link>/
-        <Link className='text-primary' href={'/horizontal-dashboard'}>Horizontal</Link>
+        <Link href={'/vertical-dashboard'}>vertical</Link>/
+        <Link href={'/horizontal-dashboard'}>horizontal</Link>
       </div>
       <div className="space-y-10 text-white"></div>
       <div key="section-name" className="space-y-5">
-        <div className="text-xs font-semibold uppercase tracking-wider text-gray-400">
+        <div className="text-xs font-semibold uppercase tracking-wider">
           Section Name
         </div>
 
