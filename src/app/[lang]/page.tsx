@@ -29,11 +29,11 @@ export default async function Home({
 
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
 
-          <div className="font-medium text-primary group-hover:text-gray-50">
+          <div className="font-medium group-hover:text-gray-50">
             Test
           </div>
 
-          <div className="text-sm text-primary line-clamp-3 group-hover:text-gray-300">
+          <div className="text-sm line-clamp-3 group-hover:text-gray-300">
             Test Description
           </div>
         </div>

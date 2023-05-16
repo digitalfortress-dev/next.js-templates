@@ -1,6 +1,5 @@
-import { Metadata } from 'next';
-
-import './globals.css';
+import { Metadata } from 'next'
+import './globals.css'
 export const metadata: Metadata = {
   title: {
     default: 'DF - Next.js Boilerplate',
@@ -11,14 +10,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  params
 }: {
-  children: React.ReactNode,
-  params: { lang: string }
+  children: React.ReactNode
 }) {
-
   return (
-    <html lang={params.lang} className="[color-scheme:dark]">
+    <html lang="en" className="[color-scheme:dark]">
       <body className="dark bg-primary overflow-y-scroll bg-[url('/grid.svg')] pb-36">
         <main>{children}</main>
         {/* <div className="lg:pl-72">
