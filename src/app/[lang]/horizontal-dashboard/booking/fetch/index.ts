@@ -1,12 +1,12 @@
-import HttpFetch from "@/utils/fetchRestAPI";
+import httpFetch from "@/utils/fetchRestAPI";
 import { BookingsOperation, ProductsOperation } from "./type";
 import { nextFetchGraphQl } from "@/utils/fetchGraphQl";
 import { getBookings } from "./queries";
 
 // Rest API
 export async function getProducts(): Promise<ProductsOperation[]> {
-  const newData = new HttpFetch();
-  const data = await newData.get('/users');
+  const httpFetchClient = new httpFetch();
+  const data = await httpFetchClient.get('/users');
   return data
 }
 // GraphQL

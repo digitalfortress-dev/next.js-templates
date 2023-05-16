@@ -4,7 +4,7 @@ interface CustomRequestInit extends RequestInit {
   parseResponse?: boolean;
 }
 
-class HttpFetch {
+class httpFetch {
   private _baseURL: string;
   private _headers: Record<string, string>;
 
@@ -93,4 +93,4 @@ class HttpFetch {
   }
 }
 
-export default HttpFetch;
+export default httpFetch;
