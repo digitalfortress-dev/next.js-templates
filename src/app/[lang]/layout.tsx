@@ -1,8 +1,5 @@
-import { Metadata } from 'next';
-import { cookies } from 'next/headers';
-
-import PresetColor from '@/components/common/PresetColor';
-import './globals.css';
+import { Metadata } from 'next'
+import './globals.css'
 export const metadata: Metadata = {
   title: {
     default: 'DF - Next.js Boilerplate',
@@ -13,20 +10,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  params
 }: {
-  children: React.ReactNode,
-  params: { lang: string }
+  children: React.ReactNode
 }) {
-
-  const cookieStore = cookies();
-  const theme = cookieStore.get('theme');
-
   return (
-    <html lang={params.lang}>
-      <body className={`theme-${theme?.value} text-skin-base bg-skin-base overflow-y-scroll bg-[url('/grid.svg')]`}>
+    <html lang="en" className="[color-scheme:dark]">
+      <body className="dark bg-primary overflow-y-scroll bg-[url('/grid.svg')] pb-36">
         <main>{children}</main>
-        <PresetColor />
         {/* <div className="lg:pl-72">
           <div className="mx-auto max-w-4xl space-y-8 px-2 pt-20 lg:py-8 lg:px-8">
             <div className="rounded-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20">

@@ -20,18 +20,6 @@ const PUBLIC_FILE = /\.(.*)$/
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname
 
-  const requestHeaders = new Headers(request.headers);
-
-  const theme = request.cookies.get('theme')?.value || ''
-
-  requestHeaders.set('setting-theme', theme);
-  const response = NextResponse.next({
-    request: {
-      headers: requestHeaders,
-    },
-  });
-  response.headers.set('setting-theme', theme);
-
   if (PUBLIC_FILE.test(pathname)) {
     return undefined
   }
@@ -47,8 +35,6 @@ export function middleware(request: NextRequest) {
     const locale = getLocale(request)
     return NextResponse.redirect(new URL(`/${locale}/${pathname}`, request.url))
   }
-  return response;
-
 }
 
 export const config = {

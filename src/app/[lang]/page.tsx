@@ -18,12 +18,12 @@ export default async function Home({
 
       <button>{dictionary['dashboard']['home']}</button>
       <div>
-        <Link href={'/vertical-dashboard'}>{dictionary['dashboard']['vertical']}</Link>/
-        <Link href={'/horizontal-dashboard'}>{dictionary['dashboard']['horizontal']}</Link>
+        <Link href={'/vertical-dashboard'}>vertical</Link>/
+        <Link href={'/horizontal-dashboard'}>horizontal</Link>
       </div>
       <div className="space-y-10 text-white"></div>
       <div key="section-name" className="space-y-5">
-        <div className="text-blue-light font-semibold uppercase tracking-wider">
+        <div className="text-xs font-semibold uppercase tracking-wider">
           Section Name
         </div>
 

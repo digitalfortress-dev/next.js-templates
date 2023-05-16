@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+import colors from 'tailwindcss/colors';
 
 module.exports = {
   content: [
@@ -12,29 +13,34 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
-      color: {
-        current: "var(--text-color)",
-        light: "var(--bg-color)",
-        dark: "var()"
-      },
-      colors: {
-      },
-      textColor: {
-        skin: {
-          base: "var(--text-color)",
-        }
-      },
       backgroundColor: {
-        skin: {
-          base: "var(--bg-color)",
-        }
+        primary: "var(--color-bg-primary)",
+        secondary: "var(--color-bg-secondary)",
+        accent: "var(--color-bg-secondary)",
+    },
+    textColor: {
+        primary: "var(--color-text-primary)",
+        secondary: "var(--color-text-secondary)",
+        accent: "var(--color-text-accent)",
+    },
+      // https://vercel.com/design/color
+      colors: {
+        gray: colors.zinc,
+        'gray-1000': 'rgb(17,17,19)',
+        'gray-1100': 'rgb(10,10,11)',
+        vercel: {
+          pink: '#FF0080',
+          blue: '#0070F3',
+          cyan: '#50E3C2',
+          orange: '#F5A623',
+          violet: '#7928CA',
+        },
       },
-
-      // backgroundImage: ({ theme }) => ({
-      //   'vc-border-gradient': `radial-gradient(at left top, ${theme(
-      //     'colors.gray.500',
-      //   )}, 50px, ${theme('colors.gray.800')} 50%)`,
-      // }),
+      backgroundImage: ({ theme }) => ({
+        'vc-border-gradient': `radial-gradient(at left top, ${theme(
+          'colors.gray.500',
+        )}, 50px, ${theme('colors.gray.800')} 50%)`,
+      }),
       keyframes: ({ theme }) => ({
         rerender: {
           '0%': {
@@ -88,14 +94,14 @@ module.exports = {
           },
         },
       }),
-      maxWidth: {
+      maxWidth : {
         50: '50%',
         60: '60%',
         70: '70%',
         80: '80%',
         90: '90%',
       },
-      minWidth: {
+      minWidth : {
         50: '50%',
         60: '60%',
         70: '70%',
