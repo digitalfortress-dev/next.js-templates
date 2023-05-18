@@ -1,8 +1,6 @@
 import { HorizontalNavbar } from '@/components/common/navbar/horizontal'
 import { Metadata } from 'next'
 
-import './globals.css'
-
 export const metadata: Metadata = {
   title: {
     default: 'DF - Next.js Boilerplate',

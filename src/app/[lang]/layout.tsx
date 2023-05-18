@@ -1,8 +1,5 @@
 import { Metadata } from 'next'
 import './globals.css'
-import { AddressBar } from '@/components/common/AddressBar'
-import { Byline } from '@/components/common/Byline'
-import { VerticalNavbar } from '@/components/common/navbar/vertical'
 export const metadata: Metadata = {
   title: {
     default: 'DF - Next.js Boilerplate',

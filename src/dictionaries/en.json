@@ -3,8 +3,6 @@
     "welcome": "Welcome"
   },
   "dashboard": {
-    "home": "Home",
-    "vertical": "Vertical",
-    "horizontal": "Horizontal"
+    "home": "Home"
   }
 }
