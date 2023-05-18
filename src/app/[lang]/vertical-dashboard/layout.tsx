@@ -1,6 +1,5 @@
 import { VerticalNavbar } from '@/components/common/navbar/vertical'
 import { Metadata } from 'next'
-import './globals.css'
 
 export const metadata: Metadata = {
   title: {

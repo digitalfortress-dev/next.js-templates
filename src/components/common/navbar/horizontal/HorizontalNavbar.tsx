@@ -3,59 +3,67 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { NavbarList } from './NavbarList';
+import { action, useStore } from '@/app/[lang]/context';
 
-export const menuIcon = [
+export const menuIconHorizontal = [
   {
-    name: 'Menu1',
-    icon: '/Item.svg'
-  },
-  {
-    name: 'Menu2',
-    icon: '/Item-1.svg'
+    name: 'Booking',
+    icon: '/Item-1.svg',
+    path: '/horizontal-dashboard/booking',
+    slug: 'booking'
   },
   {
     name: 'Menu3',
-    icon: '/Item-2.svg'
+    icon: '/Item-2.svg',
+    path: '',
+    slug: ''
   },
   {
     name: 'Menu4',
-    icon: '/Item-3.svg'
+    icon: '/Item-3.svg',
+    path: '',
+    slug: ''
   },
   {
     name: 'Menu5',
-    icon: '/Item-4.svg'
+    icon: '/Item-4.svg',
+    path: '',
+    slug: ''
   },
   {
     name: 'Menu6',
-    icon: '/Item-5.svg'
+    icon: '/Item-5.svg',
+    path: '',
+    slug: ''
   },
   {
     name: 'Menu7',
-    icon: '/Item-6.svg'
+    icon: '/Item-6.svg',
+    path: '',
+    slug: ''
   },
   {
     name: 'Menu8',
-    icon: '/Item-7.svg'
+    icon: '/Item-7.svg',
+    path: '',
+    slug: ''
   },
   {
     name: 'Menu9',
-    icon: '/Item-8.svg'
-  },
-  {
-    name: 'Menu10',
-    icon: '/Item-9.svg'
-  },
-  {
-    name: 'Menu11',
-    icon: '/Item-10.svg'
+    icon: '/Item-8.svg',
+    path: '',
+    slug: ''
   }
 ]
 
 export function HorizontalNavbar() {
+
+
+
   return (
     <aside className='fixed w-full mx-auto top-0 mt-2 '>
-      <nav className='flex mx-auto max-w-90'>
-        <div className='rounded-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20'>
+      <nav className='flex mx-10'>
+        <div className='mr-4 rounded-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20'>
           <div className='flex items-center rounded-lg bg-primary pl-2 py-1'>
             <Logo />
             <NavbarList />
@@ -68,7 +76,7 @@ export function HorizontalNavbar() {
   )
 }
 
-const Logo = () => {
+export const Logo = () => {
   return (
     <div className='flex items-center mr-10'>
       <Image
@@ -84,10 +92,20 @@ const Logo = () => {
   )
 }
 
-const Search = () => {
+export const Search = () => {
+
+  const { state: { textInput }, dispatch } = useStore()
+
+  const handleChangeText = (e: React.ChangeEvent<HTMLInputElement>) => {
+    dispatch(action.setTextInput(e.target.value))
+  }
+
   return (
-    <div className='relative ml-6 rounded-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20'>
-      <input placeholder="Search in all system" className='rounded-lg bg-primary text-primary border-none border-opacity-0 pl-8 h-full' type="text" />
+    <div className='relative rounded-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20'>
+      <input
+        value={textInput}
+        onChange={handleChangeText}
+        placeholder="Search in all system" className='rounded-lg bg-primary text-primary border-none border-opacity-0 pl-8 h-full' type="text" />
       <Image className='absolute top-1/4 left-2' src='/search.svg'
         width={20}
         height={20}
