@@ -1,8 +1,8 @@
 import { useContext } from 'react'
-import AppContext from './context'
+import SearchContext from './context'
 
 export const useStore = () => {
-  const { state, dispatch } = useContext(AppContext)
+  const { state, dispatch } = useContext(SearchContext)
 
   return { state, dispatch }
 

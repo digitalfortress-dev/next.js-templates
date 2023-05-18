@@ -6,7 +6,7 @@ export const initialState: IState = {
   dataInput: []
 }
 
-function AppReducer(state: IState, action: {
+function SearchReducer(state: IState, action: {
   type: string,
   payload: any
 }) {
@@ -23,4 +23,4 @@ function AppReducer(state: IState, action: {
   }
 }
 
-export default AppReducer
+export default SearchReducer

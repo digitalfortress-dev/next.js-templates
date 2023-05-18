@@ -90,56 +90,6 @@ export function VerticalNavbar() {
           height={24}
           alt="Picture of the author" />
       </div>
-
-      {/* <div className="flex h-14 items-center py-4 px-4 lg:h-auto">
-        <Link
-          href="/"
-          className="group flex w-full items-center gap-x-2.5"
-          onClick={close}
-        >
-          <div className="text-primary h-7 w-7 rounded-full border border-white/30 group-hover:border-white/50">
-            Logo
-          </div>
-
-          <h3 className="font-semibold tracking-wide text-primary group-hover:text-gray-50">
-            App Router <span className="Work in progress">(Beta)</span>
-          </h3>
-        </Link>
-      </div> */}
-      {/* <button
-        type="button"
-        className="group absolute right-0 top-0 flex h-14 items-center gap-x-2 px-4 lg:hidden"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        <div className="font-medium text-gray-100 group-hover:text-primary">
-          Menu
-        </div>
-        {isOpen ? (
-          "Opened"
-        ) : (
-          "Closed"
-        )}
-      </button> */}
-
-      {/* <div
-        className={clsx('overflow-y-auto lg:static lg:block', {
-          'fixed inset-x-0 bottom-0 top-14 mt-px bg-black': isOpen,
-          hidden: !isOpen,
-        })}
-      >
-        <nav className="space-y-6 px-2 py-5">
-          <div key="section-name">
-            <div className="mb-2 px-3 text-xs font-semibold uppercase tracking-wider text-primary">
-              <div>section-name</div>
-            </div>
-
-            <div className="space-y-1 text-primary">
-              section-item
-            </div>
-          </div>
-        </nav>
-        <Byline className="absolute hidden sm:block" />
-      </div> */}
     </div>
   )
 }
