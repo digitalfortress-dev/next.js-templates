@@ -2,9 +2,8 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { action } from '../navbar-context';
-import { useStore } from '../navbar-context/hooks';
 import { NavbarList } from './NavbarList';
+import { action, useStore } from '@/app/[lang]/context';
 
 export const menuIconHorizontal = [
   {

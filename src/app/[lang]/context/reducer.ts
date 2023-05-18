@@ -6,7 +6,7 @@ export const initialState: IState = {
   dataInput: []
 }
 
-function NavbarReducer(state: IState, action: {
+function AppReducer(state: IState, action: {
   type: string,
   payload: any
 }) {
@@ -23,4 +23,4 @@ function NavbarReducer(state: IState, action: {
   }
 }
 
-export default NavbarReducer
+export default AppReducer

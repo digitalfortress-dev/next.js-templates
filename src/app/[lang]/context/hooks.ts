@@ -1,8 +1,8 @@
 import { useContext } from 'react'
-import NavbarContext from './context'
+import AppContext from './context'
 
 export const useStore = () => {
-  const { state, dispatch } = useContext(NavbarContext)
+  const { state, dispatch } = useContext(AppContext)
 
   return { state, dispatch }
 
